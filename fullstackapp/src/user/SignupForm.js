@@ -66,7 +66,7 @@ const SignupForm = () => {
         </div>
         <div className="form-check form-check-inline">
           <input type="checkbox" className="form-check-input" name="hearAbout" value="Others" onChange={handleChange} checked={formData.hearAbout.includes('Others')} /> Others
-        </div>
+          </div>
       </div>
       <div className="form-group">
         <select className="form-control" name="city" value={formData.city} onChange={handleChange}>
