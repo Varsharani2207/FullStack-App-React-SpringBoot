@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const LoginForm = () => {
@@ -32,6 +33,7 @@ const LoginForm = () => {
       </div>
       <br></br>
       <button type="submit" className="btn btn-primary">Login</button>
+      <div>For the first Time user <Link to= '/Signup'>Signup here</Link></div>
     </form>
   );
 };

@@ -28,6 +28,7 @@ const SignupForm = () => {
   };
 
   return (
+    <div className='w-100 mx-auto mt-4 p-4 item-center' style={{ backgroundColor: " ", height: "45vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
     <form className="container mt-5" style={{maxWidth: "650px"}} onSubmit={handleSubmit}>
       <div className="form-group">
         <input type="text" className="form-control" name="name" placeholder="Name" value={formData.name} onChange={handleChange} pattern="[A-Za-z]+" required />
@@ -79,6 +80,7 @@ const SignupForm = () => {
       </div><br></br>
       <button type="submit" className="btn btn-primary">Save</button>
     </form>
+    </div>
   );
 };
 
