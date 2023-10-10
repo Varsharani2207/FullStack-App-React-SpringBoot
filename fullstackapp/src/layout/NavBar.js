@@ -1,11 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function navBar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">
+    <a className="navbar-brand" href="/">
         Full Stack Application
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,12 +17,12 @@ export default function navBar() {
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" >Add User</a>
-        </li>  
+        <li>
+        <a class="nav-link active" aria-current="page" href="/signup">Add User</a>
+        </li>
         </ul>
     </div>
-    <button className='btn btn-outline-light'>Add User</button>
+    <a class="nav-link active" aria-current="page" href="/login">Login</a>
     </div>
     </nav>
     </div>
