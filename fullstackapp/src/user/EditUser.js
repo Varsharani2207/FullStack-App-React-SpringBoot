@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 import axios from 'axios';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate, Link, useParams } from 'react-router-dom';
 
-const SignupForm = () => {
+const EditUser = () =>  {
 
+    const {id}=useParams();
   let navigate=useNavigate();
 
   const [formData, setFormData] = useState({
@@ -16,6 +17,10 @@ const SignupForm = () => {
     city: 'Mumbai',
     state: 'Maharashtra'
   });
+
+useEffect(()=>{
+    loadUser()
+},[]);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -30,16 +35,21 @@ const SignupForm = () => {
   const handleSubmit = async(e) => {
     e.preventDefault();
     // Send formData to backend for saving
-    await axios.post("http://localhost:8080/addUser",formData);
+    await axios.put(`http://localhost:8080/getUser/${id}`,formData);
     navigate("/");
-  };
+  };    
+
+    const loadUser= async()=>{
+        const result= await axios.get(`http://localhost:8080/getUser/${id}`);
+        setFormData(result.data);
+    }
 
   return (
 
     <div className='container'>
       <div classname='row'>
         <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow' >
-          <h2 className='text-centre m-4'>Register User</h2>
+          <h2 className='text-centre m-4'>Edit User</h2>
           <form className="container mt-5" style={{ maxWidth: "650px" }} onSubmit={handleSubmit}>
             <div className="form-group">
               <input type="text" style={{ marginBottom: '10px' }} className="form-control" name="name" placeholder="Name" value={formData.name} onChange={handleChange} pattern="[A-Za-z]+" required />
@@ -90,7 +100,7 @@ const SignupForm = () => {
             <div className="form-group">
               <input type="text" className="form-control" name="state" value={formData.state} readOnly />
             </div><br></br>
-            <button type="submit" className="btn btn-outline-primary" value="submit">Register</button>
+            <button type="submit" className="btn btn-outline-primary" value="submit">Update</button>
             <Link className="btn btn-outline-danger mx-2" to='/' >Cancel</Link>
           </form>
 
@@ -102,5 +112,5 @@ const SignupForm = () => {
   );
 };
 
-export default SignupForm;
+export default EditUser;
 
