@@ -7,6 +7,7 @@ import NavBar from './layout/NavBar';
 import Homepage from './pages/Homepage';
 import EditUser from './user/EditUser';
 import ViewUser from './user/ViewUser';
+import AddUser from './user/AddUser';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route exact path='/' element={<Homepage />} />
           <Route path='/login' element={<LoginForm />} />
           <Route path='/signup' element={<SignupForm />} />
+          <Route path='/adduser' element={<AddUser />} />
           <Route path='/edituser/:id' element={<EditUser/>} />
           <Route path='/viewuser/:id' element={<ViewUser/>} />
 

@@ -1,8 +1,14 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
 const LoginForm = () => {
+
+
+  // const {setIslogin,setUser} = useContext(LoginContext);
+  // const navigate = useNavigate
+  // const [loginDto, setLoginDto ] = useState({username:"",password:""});
+ 
   const [formData, setFormData] = useState({
     name: '',
     email: '',

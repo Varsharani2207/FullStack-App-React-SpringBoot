@@ -10,6 +10,7 @@ const SignupForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    password:'',
     phone: '',
     gender: '',
     hearAbout: [],
@@ -46,6 +47,9 @@ const SignupForm = () => {
             </div>
             <div className="form-group">
               <input type="email" style={{ marginBottom: '10px' }} className="form-control" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+            </div>
+            <div className="form-group">
+              <input type="password" style={{ marginBottom: '10px' }} className="form-control" name="password" placeholder="Email" value={formData.email} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <input type="tel" style={{ marginBottom: '10px' }} className="form-control" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} pattern="[0-9]+" required />

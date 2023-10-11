@@ -5,7 +5,7 @@ import { useNavigate, Link, useParams } from 'react-router-dom';
 
 const EditUser = () =>  {
 
-    const {id}=useParams();
+  const {id}=useParams();
   let navigate=useNavigate();
 
   const [formData, setFormData] = useState({

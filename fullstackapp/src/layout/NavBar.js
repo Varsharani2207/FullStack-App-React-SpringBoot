@@ -18,7 +18,7 @@ export default function navBar() {
                 <a class="nav-link active" aria-current="page" href="/">Home</a>
               </li>
               <li>
-                <a class="nav-link active" aria-current="page" href="/signup">Add User</a>
+                <a class="nav-link active" aria-current="page" href="/adduser">Add User</a>
               </li>
             </ul>
           </div>

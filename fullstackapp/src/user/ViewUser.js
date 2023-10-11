@@ -71,7 +71,6 @@ return (
         <Link className="btn btn-primary my-2" to={"/"}>
           Back to Home
         </Link>
-
                 </div>
             </div>
         </div>
