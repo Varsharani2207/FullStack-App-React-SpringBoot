@@ -45,9 +45,6 @@ public class UserController {
 			user.setName(newUser.getName());
 			user.setEmail(newUser.getEmail());
 			user.setPhone(newUser.getPhone());
-			user.setGender(newUser.getGender());
-			user.setHearAbout(newUser.getHearAbout());
-			user.setCity(newUser.getCity());
 			return userRepository.save(user);
 		}).orElseThrow(()-> new UserNotFoundExcpetion(id));
 		
