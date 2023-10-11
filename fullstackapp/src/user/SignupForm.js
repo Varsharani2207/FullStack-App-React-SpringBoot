@@ -38,7 +38,7 @@ const SignupForm = () => {
   return (
 
     <div className='container'>
-      <div classname='row'>
+      <div className='row'>
         <div className='col-md-6 offset-md-3 border rounded p-4 mt-2 shadow' >
           <h2 className='text-centre m-4'>Register User</h2>
           <form className="container mt-5" style={{ maxWidth: "650px" }} onSubmit={handleSubmit}>
@@ -49,7 +49,7 @@ const SignupForm = () => {
               <input type="email" style={{ marginBottom: '10px' }} className="form-control" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
             </div>
             <div className="form-group">
-              <input type="password" style={{ marginBottom: '10px' }} className="form-control" name="password" placeholder="Email" value={formData.email} onChange={handleChange} required />
+              <input type="password" style={{ marginBottom: '10px' }} className="form-control" name="password" placeholder="Password" value={formData.password} onChange={handleChange} required />
             </div>
             <div className="form-group">
               <input type="tel" style={{ marginBottom: '10px' }} className="form-control" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} pattern="[0-9]+" required />

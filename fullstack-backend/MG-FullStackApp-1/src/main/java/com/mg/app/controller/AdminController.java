@@ -24,7 +24,7 @@ import com.mg.app.service.AdminService;
 
 @RestController
 @CrossOrigin("http://localhost:3000")
-@RequestMapping("admin")
+@RequestMapping("/admin")
 public class AdminController {
 	
 	@Autowired
@@ -41,7 +41,10 @@ public class AdminController {
 	
 	@PostMapping("/authenticate")
 	public ResponseEntity<?> authenticate(@RequestBody LoginDto logindto){
+		System.out.println("in controller"+logindto);
+	
 		Admin admin =adminService.authenticate(logindto);
+//		Admin admin= adminService.authenticate(//logindto.)
 		return admin==null?new ResponseEntity<>("Invalid Credentials",HttpStatus.INTERNAL_SERVER_ERROR):ResponseEntity.ok(adminService.authenticate(logindto));
 	}
 	@GetMapping("/getalladmin")

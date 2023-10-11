@@ -18,7 +18,10 @@ public class AdminServiceImpl implements AdminService {
 	@Override
 	public Admin authenticate(LoginDto credential) {
 		// TODO Auto-generated method stub
-		return adminrepo.findByUsernameAndPassword(credential.getUsername(), credential.getPassword());
+		
+		System.out.println("in adminservice"+ credential);
+		Admin admin=adminrepo.findByEmailAndPassword(credential.getEmail(), credential.getPassword());
+		return admin;
 	}
 
 }

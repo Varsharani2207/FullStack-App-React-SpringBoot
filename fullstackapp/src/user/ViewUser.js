@@ -34,8 +34,12 @@ return (
 
         <div className="card">
           <div className="card-header">
-           <strong>Details of user id : {formData.id} </strong> 
+           <strong>User Details  </strong> 
             <ul className="list-group list-group-flush" style={{textAlign: "left"}} >
+              <li className="list-group-item">
+                <b>Id:</b>
+                {formData.id}
+              </li>
               <li className="list-group-item">
                 <b>Name:</b>
                 {formData.name}
@@ -48,22 +52,7 @@ return (
                 <b>Phone:</b>
                 {formData.phone}
               </li>
-              <li className="list-group-item">
-                <b>Gender:</b>
-                {formData.gender}
-              </li>
-              <li className="list-group-item">
-                <b>HearAbout:</b>
-                {formData.hearAbout}
-              </li>
-              <li className="list-group-item">
-                <b>City:</b>
-                {formData.city}
-              </li>
-              <li className="list-group-item">
-                <b>State:</b>
-                {formData.state}
-              </li>
+              
             
             </ul>
           </div>

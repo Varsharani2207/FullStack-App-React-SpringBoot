@@ -7,5 +7,6 @@ import com.mg.app.model.Admin;
 
 @Service
 public interface AdminService {
+	
 	Admin authenticate(LoginDto credential) ;
 }
